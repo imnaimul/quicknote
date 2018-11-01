@@ -1,0 +1,31 @@
+.single-note {
+    position: relative;
+    color: $color-text;
+    padding: 3rem;
+}
+
+.single-note__title {
+    color: $color-white;
+    font-size: 4.8rem;
+}
+
+.single-note__created {
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 3rem;
+}
+
+.single-note__body {
+    font-size: 1.8rem;
+}
+
+.single-note__body p {
+    margin: 0;
+}
+
+.notes__container .buttons {
+    position: absolute;
+    top: 42px;
+    right: 20px;
+}

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+html {font-size: 62.5%;}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Lato';
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    background: #20262E;
+}
+
+#app {
+    height: calc(100vh - 115px);
+    
+    &__container {
+        height: 88vh;
+        margin-top: 48px;
+        border: 1px solid $border-color;
+        overflow-y: scroll;
+
+        .single {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+
+#app > .row {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}

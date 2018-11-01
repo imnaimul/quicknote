@@ -1,0 +1,74 @@
+<% include ../partials/header %>
+<div id="app" class="container-fluid mx-0">
+    
+    <div class="row">
+        <% if ( errorMsg.length > 0 ) { %>
+            <% include ../partials/errorMessages %>
+        <% } %>
+        <div class="editor col-md-9 mx-auto">
+            <div id="toolbar">
+                <div id="toolbar">
+                    <span class="ql-formats">
+                        <select class="ql-header">
+                        <option value="1">Heading</option>
+                        <option value="2">Subheading</option>
+                        <option selected>Normal</option>
+                        </select>
+                        <select class="ql-font">
+                        <option selected>Sans Serif</option>
+                        <option value="serif">Serif</option>
+                        <option value="monospace">Monospace</option>
+                        </select>
+                    </span>
+
+                    <span class="ql-formats">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-strike"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <select class="ql-color"></select>
+                        <select class="ql-background"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <select class="ql-align">
+                        <option selected></option>
+                        <option value="center"></option>
+                        <option value="right"></option>
+                        <option value="justify"></option>
+                        </select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-blockquote"></button>
+                        <button class="ql-link"></button>
+                        <button class="ql-image"></button>
+                        <button class="ql-code-block"></button>
+                        <button class="ql-video"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-clean"></button>
+                    </span>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary btn-add">Add Note</a>
+                </div>
+            </div>
+            <div class="title">
+                <form id="add-note-form" action="/notes/new" method="POST">
+                    <input class="form-control title" name="title" type="text" placeholder="Note title">
+                    <input class="form-control tags" name="tags" type="text" placeholder="Tags (use comma (,) to seperate)">
+                    <textarea class="hidden" name="body"></textarea>
+                </form>
+            </div>
+            <div id="editor">
+
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+<% include ../partials/footer %>

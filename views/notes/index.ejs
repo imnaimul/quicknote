@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<div id="app" class="dashboard container-fluid mx-0">
+    
+    <div class="row">
+        <div id="app__container" class="col-md-8 px-0 mx-auto">
+
+            <% if ( successMsg.length > 0 ) { %>
+                <% include ../partials/successMessages %>
+            <% } %>
+
+            <% if ( errorMsg.length > 0 ) { %>
+                <% include ../partials/errorMessages %>
+            <% } %>
+
+            <div class="notes__container">
+                <% notes.forEach(note => { %>
+                    <div class="single">
+                        <div class="single__title"> <a href="/notes/<%= note._id %>"> <%= note.title %> </a></div>
+                        <div class="single__date"> <%= note.created %> </div>
+
+                        <% note.tags.forEach(tag => { %>
+                            <a href="/notes/?category=<%= tag %>" class="tag tag--<%= tag %>"><%= tag %></a>
+                        <% }) %>
+                    </div>
+                    
+                <% }); %>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<% include ../partials/footer %>

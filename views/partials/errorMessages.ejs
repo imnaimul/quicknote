@@ -1,0 +1,22 @@
+<script>
+    $.notify({
+        message: `<%= errorMsg %>`
+    } , {
+        type: 'danger',
+        offset: 20,
+        spacing: 10,
+        z_index: 1031,
+        delay: 1225,
+        timer: 1225,
+        url_target: '_blank',
+        mouse_over: null,
+        animate: {
+            enter: 'animated fadeInDown',
+            exit: 'animated fadeOutUp'
+        },
+        placement: {
+            from: "top",
+            align: "center"
+        },
+    });
+</script>

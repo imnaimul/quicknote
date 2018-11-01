@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+<div id="app" class="dashboard container-fluid mx-0">
+    
+    <div class="row">
+        <div id="app__container" class="col-md-8 px-0 mx-auto">
+
+            <% if ( successMsg.toString() !== '' ) { %>
+                <% include ../partials/successMessages %>
+            <% } %>
+
+            <% if ( errorMsg.toString() !== '' ) { %>
+                <% include ../partials/errorMessages %>
+            <% } %>
+
+            <div class="notes__container">
+                
+                <div class="single-note">
+                    <div class="single-note__title"> <%= note.title %> </div>
+                    <div class="single-note__created"> <%= note.created %> </div>
+                    <div class="single-note__body"> <%- note.body %> </div>
+                </div>
+                <div class="buttons">
+
+                    <a href="/notes/edit/<%= note._id %>" class="btn btn-primary btn-edit mr-3">Edit</a>
+
+                    <form id="delete-note-form" class="d-inline" action="/notes/<%= note._id %>?_method=DELETE" method="POST">
+                        <a href="#" class="btn btn-primary btn-delete">Delete</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<% include ../partials/footer %>

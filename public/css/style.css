@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@font-face {
+  font-family: 'Segoe UI Web (West European)';
+  src: url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-light.woff2") format("woff2"), url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Segoe UI Web (West European)';
+  src: url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-semilight.woff2") format("woff2"), url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-semilight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Segoe UI Web (West European)';
+  src: url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-regular.woff2") format("woff2"), url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Segoe UI Web (West European)';
+  src: url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-semibold.woff2") format("woff2"), url("https://static2.sharepointonline.com/files/fabric/assets/fonts/segoeui-westeuropean/segoeui-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #20262E; }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(171, 178, 191, 0.25); }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
+::-webkit-scrollbar-button {
+  background: #20262E;
+  height: 32px;
+  display: none; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Lato';
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  background: #20262E; }
+
+#app {
+  height: calc(100vh - 115px); }
+  #app__container {
+    height: 88vh;
+    margin-top: 48px;
+    border: 1px solid #2d333b;
+    overflow-y: scroll; }
+    #app__container .single {
+      border-bottom: 1px solid #2d333b; }
+
+#app > .row {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden; }
+
+a, a:hover, a:active, a:focus, a:visited {
+  text-decoration: none; }
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 0px 0 #2d333b; }
+
+.btn {
+  border-radius: 0;
+  border: 0; }
+
+.alert {
+  border-radius: 0;
+  border: 0;
+  font-size: 2rem;
+  padding: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); }
+  .alert-danger {
+    background: #db5b4d;
+    color: #fff; }
+  .alert-success {
+    background: #2ECC71;
+    color: #fff; }
+
+.close {
+  text-shadow: none !important;
+  font-size: 2.5rem; }
+
+.ql-editor {
+  height: calc(100vh - 275px); }
+
+.ql-container {
+  overflow: hidden; }
+
+.editor {
+  margin-top: 40px;
+  height: 90vh;
+  background: #20262E; }
+
+#toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0; }
+
+#toolbar::after {
+  content: '';
+  display: none; }
+
+.title input {
+  height: auto;
+  font-weight: 100;
+  padding: 10px 0;
+  margin-left: 12px;
+  outline: none;
+  color: #fff;
+  background: #20262E;
+  border: 0;
+  outline: 0;
+  border-radius: 0; }
+
+.title input.title {
+  font-size: 34px; }
+
+.title input.tags {
+  font-size: 17px; }
+
+.title input:focus {
+  background: #20262E;
+  outline: 0;
+  border: 0;
+  color: #fff; }
+
+.btn-add {
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #385FFF, #862aff);
+  color: #fff !important;
+  border: 0;
+  padding: .75rem 1.75rem; }
+
+.btn-save {
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #385FFF, #862aff);
+  color: #fff !important;
+  border: 0;
+  padding: .75rem 1.75rem; }
+
+.btn-edit {
+  font-size: 1.6rem;
+  background: linear-gradient(to right, #385FFF, #862aff);
+  color: #fff !important;
+  border: 0;
+  padding: .75rem 1.75rem; }
+
+.btn-delete {
+  font-size: 1.6rem;
+  background: linear-gradient(to left, #f12711, #f5af19);
+  color: #fff !important;
+  border: 0;
+  padding: .75rem 1.75rem; }
+
+.single-note {
+  position: relative;
+  color: #ABB2BF;
+  padding: 3rem; }
+
+.single-note__title {
+  color: #fff;
+  font-size: 4.8rem; }
+
+.single-note__created {
+  font-size: 1.6rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2d333b;
+  margin-bottom: 3rem; }
+
+.single-note__body {
+  font-size: 1.8rem; }
+
+.single-note__body p {
+  margin: 0; }
+
+.notes__container .buttons {
+  position: absolute;
+  top: 42px;
+  right: 20px; }
+
+.navbar-top {
+  background: #1c2128;
+  border-bottom: 1px solid #2d333b; }
+  .navbar-top img.logo {
+    height: 48px;
+    width: auto; }
+  .navbar-top a.navbar-brand {
+    display: flex;
+    align-items: center; }
+    .navbar-top a.navbar-brand span {
+      font-size: 2.5rem;
+      position: relative;
+      bottom: 3px;
+      margin-left: 8px; }
+
+.single {
+  padding: 2rem 2.75rem; }
+  .single__date {
+    color: #ABB2BF; }
+  .single__title {
+    font-weight: 100;
+    font-size: 2.75rem; }
+    .single__title a {
+      color: #fff; }
+  .single:not(:last-child) {
+    border-bottom: 1px solid #2d333b; }
+
+textarea.hidden {
+  display: none; }
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: #fff;
+  padding-right: .75rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 700;
+  overflow: hidden; }
+  .tag--javascript {
+    background: #f0db4f;
+    color: #2b2d2e; }
+    .tag--javascript::before {
+      content: url(../img/tag-icon/js.png);
+      display: inline-block;
+      margin-right: 5px; }
+  .tag--async {
+    background: #fff;
+    color: #2b2d2e; }
+    .tag--async::before {
+      content: url(../img/tag-icon/async.png);
+      display: inline-block;
+      margin-right: 5px;
+      position: relative;
+      top: 2px;
+      left: 3px; }
+  .tag:not(:last-child) {
+    margin-right: 7px; }
